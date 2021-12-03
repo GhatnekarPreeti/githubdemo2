@@ -28,6 +28,16 @@ public class ResourceLeak {
 public void foo() {
     Runtime.getRuntime().exit(0);   // never stop the JVM manually, the container will do this.
 }
+	public void process3() {
+		
+		// EMB-ISSUE: CodeIssueNames.RESOURCE_LEAK/no-detect
+		try (PrintWriter out2 = new PrintWriter(new File(""))) {
+//			out2.println("the text");
+		} catch (IOException e) {
+		}
+		
+	}
+	
 
 	
 	public void expression1() {
