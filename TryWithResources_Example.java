@@ -9,17 +9,11 @@ public class TryWithResources_Example {
       String mysqlUrl = "jdbc:mysql://localhost/mydatabase";
       System.out.println("Connection established......");
       //Registering the Driver
+        Connection con;
       try{
-      Connection con = DriverManager.getConnection(mysqlUrl, "root", "password");
+       con = DriverManager.getConnection(mysqlUrl, "root", "password");
       Statement stmt = con.createStatement(); {
-         try(ResultSet rs = stmt.executeQuery("select * from MyPlayers");){
-            //Retrieving the data
-            while(rs.next()) {
-            
-            }
-         } catch (SQLException e) {
-            e.printStackTrace();
-         }
+       
       }} catch (SQLException e) {
             e.printStackTrace();
       }
