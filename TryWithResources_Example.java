@@ -7,7 +7,6 @@ public class TryWithResources_Example {
    public static void main(String args[]) {
       //Getting the connection
       String mysqlUrl = "jdbc:mysql://localhost/mydatabase";
-      System.out.println("Connection established......");
       //Registering the Driver
         Connection con;
       try{
