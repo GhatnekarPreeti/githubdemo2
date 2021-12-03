@@ -8,9 +8,9 @@ public class TryWithResources_Example {
       //Getting the connection
       String mysqlUrl = "jdbc:mysql://localhost/mydatabase";
       //Registering the Driver
-        Connection con;
+       
       try{
-       con = DriverManager.getConnection(mysqlUrl, "root", "password");
+       Connection con = DriverManager.getConnection(mysqlUrl, "root", "password");
       Statement stmt = con.createStatement(); {
        
       }} catch (SQLException e) {
