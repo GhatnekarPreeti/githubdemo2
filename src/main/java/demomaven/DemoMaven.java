@@ -18,6 +18,9 @@ public class DemoMaven {
 	public boolean unusedMethod2(boolean k) {
 		k = true;
 		
+		try(Connection connection = dataSource.getConnection()){
+		callableStatement = connection.prepareCall("select * from table");}
+		catch(Exception e){}
         String foo = null;
         System.out.println(foo.length());
         
